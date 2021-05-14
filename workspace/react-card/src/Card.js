@@ -33,8 +33,11 @@ function Card(props) {
     )
 }
 
+// https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes
 Card.propTypes = {
-    cardColor: PropTypes.string.isRequired
+    width: PropTypes.number,
+    height: PropTypes.number.isRequired,
+    cardColor: PropTypes.oneOf(["blue", "red", "green"]).isRequired
 }
 
 Card.defaultProps = {

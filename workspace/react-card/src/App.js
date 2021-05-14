@@ -5,7 +5,7 @@ function App() {
     return (
         <div>
             <Card cardColor="red" height={200} width={200} />
-            <Card />
+            <Card cardColor="blue" />
             <Card cardColor="green" />
         </div>
     )
