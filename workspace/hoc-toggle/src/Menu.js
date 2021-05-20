@@ -1,23 +1,12 @@
 import React, {Component} from "react"
+import { withToggler } from "./withToggler.js"
 
 class Menu extends Component {
-    state = {
-        show: true
-    }
-    
-    toggleShow = () => {
-        this.setState(prevState => {
-            return {
-                show: !prevState.show
-            }
-        })
-    }
-    
     render() {
         return (
             <div>
-                <button onClick={this.toggleShow}>{this.state.show ? "Hide" : "Show"} Menu </button>
-                <nav style={{display: this.state.show ? "block" : "none"}}>
+                <button onClick={this.props.toggler}>{this.props.togglerState ? "Hide" : "Show"} Menu </button>
+                <nav style={{display: this.props.togglerState ? "block" : "none"}}>
                     <h6>Signed in as Coder123</h6>
                     <a>Your Profile</a>
                     <a>Your Repositories</a>
@@ -29,4 +18,4 @@ class Menu extends Component {
     }
 }
 
-export default Menu
+export default withToggler(Menu)
