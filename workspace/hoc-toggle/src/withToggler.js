@@ -4,7 +4,7 @@ class Toggler extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isTogglerOn: false,
+            isTogglerOn: this.props.defaultOnValue,
         }
     }
 
@@ -22,10 +22,10 @@ class Toggler extends Component {
     }
 }
 
-function withToggler(component) {
+function withToggler(component, opts) {
     return function(props) {
         return (
-            <Toggler component={component} {...props} />
+            <Toggler component={component} defaultOnValue={opts.defaultOnValue} {...props} />
         )
     }
 }
