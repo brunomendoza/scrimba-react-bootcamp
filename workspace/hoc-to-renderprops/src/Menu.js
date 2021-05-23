@@ -3,7 +3,7 @@ import Toggler from "./Toggler.js"
 
 function Menu(props) {
     return (
-        <Toggler opts={({isVisible: true})} render={(isVisible, toggle) => {
+        <Toggler startsVisible={true} render={(isVisible, toggle) => {
             return (
                 <div>
                     <button onClick={toggle}>{isVisible ? "Hide" : "Show"} Menu </button>

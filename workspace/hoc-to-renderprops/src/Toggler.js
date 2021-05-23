@@ -4,8 +4,12 @@ class Toggler extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            isVisible: props.opts.isVisible
+            isVisible: props.startsVisible
         }
+    }
+
+    static defaultProps = {
+        isVisible: false
     }
 
     handleToggle = () => {
@@ -22,5 +26,9 @@ class Toggler extends Component {
         )
     }
 }
+
+// Toggler.defaultProps = {
+//     isVisible: false
+// }
 
 export default Toggler
