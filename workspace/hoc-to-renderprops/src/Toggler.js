@@ -21,7 +21,7 @@ class Toggler extends Component {
     render() {
         return (
             <div>
-                {this.props.render(this.state.isVisible, this.handleToggle)}
+                {this.props.render({isVisible: this.state.isVisible, handleToggle: this.handleToggle})}
             </div>
         )
     }

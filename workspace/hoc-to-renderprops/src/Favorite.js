@@ -3,13 +3,13 @@ import Toggler from "./Toggler.js"
 
 function Favorite(props) {
     return (
-        <Toggler render={(isVisible, toggle) => {
+        <Toggler render={opts => {
             return (
                 <div>
                     <h3>Click heart to favorite</h3>
                     <h1>
-                        <span onClick={toggle} >
-                            {isVisible ? "❤️" : "♡"}
+                        <span onClick={opts.handleToggle} >
+                            {opts.isVisible ? "❤️" : "♡"}
                         </span>
                     </h1>
                 </div>
